@@ -81,6 +81,16 @@ robust_scaled = robust.fit_transform(X)
 print("\nRobust Scaled Data:")
 display(pd.DataFrame(robust_scaled, columns=['Height', 'Weight']).head())
 ```
+
+
+
+
+
+
+
+
+
+
 # OUPUT :
 <img width="322" height="397" alt="image" src="https://github.com/user-attachments/assets/485baa49-5993-44bb-a5fc-ae7d63d3d3f7" />
 
