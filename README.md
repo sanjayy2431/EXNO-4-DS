@@ -23,7 +23,73 @@ The feature selection techniques used are:
 2.Wrapper Method
 3.Embedded Method
 
-# CODING AND OUTPUT:
-       # INCLUDE YOUR CODING AND OUTPUT SCREENSHOTS HERE
+# CODING :
+```
+from google.colab import files
+files.upload()
+import pandas as pd
+from sklearn.preprocessing import MinMaxScaler, StandardScaler, Normalizer, MaxAbsScaler, RobustScaler
+
+# Load BMI dataset
+df = pd.read_csv("bmi.csv")
+
+# Display dataset
+print("BMI Dataset:")
+display(df.head())
+
+# Remove missing values
+df = df.dropna()
+
+# Select Height and Weight
+X = df[['Height', 'Weight']]
+
+print("Maximum Height:", X['Height'].max())
+print("Maximum Weight:", X['Weight'].max())
+
+# ---------------- MIN-MAX SCALING ----------------
+minmax = MinMaxScaler()
+minmax_scaled = minmax.fit_transform(X)
+
+print("\nMin-Max Scaled Data:")
+display(pd.DataFrame(minmax_scaled, columns=['Height', 'Weight']).head())
+
+# ---------------- STANDARD SCALING ----------------
+standard = StandardScaler()
+standard_scaled = standard.fit_transform(X)
+
+print("\nStandard Scaled Data:")
+display(pd.DataFrame(standard_scaled, columns=['Height', 'Weight']).head())
+
+# ---------------- NORMALIZATION ----------------
+normalizer = Normalizer()
+normalized = normalizer.fit_transform(X)
+
+print("\nNormalized Data:")
+display(pd.DataFrame(normalized, columns=['Height', 'Weight']).head())
+
+# ---------------- MAX ABS SCALING ----------------
+maxabs = MaxAbsScaler()
+maxabs_scaled = maxabs.fit_transform(X)
+
+print("\nMaxAbs Scaled Data:")
+display(pd.DataFrame(maxabs_scaled, columns=['Height', 'Weight']).head())
+
+# ---------------- ROBUST SCALING ----------------
+robust = RobustScaler()
+robust_scaled = robust.fit_transform(X)
+
+print("\nRobust Scaled Data:")
+display(pd.DataFrame(robust_scaled, columns=['Height', 'Weight']).head())
+```
+# OUPUT :
+<img width="322" height="397" alt="image" src="https://github.com/user-attachments/assets/485baa49-5993-44bb-a5fc-ae7d63d3d3f7" />
+
+
+<img width="181" height="381" alt="image" src="https://github.com/user-attachments/assets/081de1eb-a5fe-468c-9282-8f8ff7fb4b6a" />
+
+
+
+<img width="165" height="367" alt="image" src="https://github.com/user-attachments/assets/aaa25ed9-1d2e-40bb-bca3-5c8e72776f6f" />
+
 # RESULT:
        # INCLUDE YOUR RESULT HERE
