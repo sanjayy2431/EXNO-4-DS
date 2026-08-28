@@ -92,4 +92,4 @@ display(pd.DataFrame(robust_scaled, columns=['Height', 'Weight']).head())
 <img width="165" height="367" alt="image" src="https://github.com/user-attachments/assets/aaa25ed9-1d2e-40bb-bca3-5c8e72776f6f" />
 
 # RESULT:
-       # INCLUDE YOUR RESULT HERE
+Thus, the given dataset was successfully read and cleaned. Feature Scaling and Feature Selection were successfully performed on the dataset.
