@@ -98,7 +98,12 @@ display(pd.DataFrame(robust_scaled, columns=['Height', 'Weight']).head())
 <br>
 <br>
 <br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 # OUPUT :
